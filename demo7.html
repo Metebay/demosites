@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzt. [İsim Soyisim] | Özel Fizyoterapi Hizmetleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --gold: #c5a358;
+            --dark: #121212;
+            --cream: #f9f7f2;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            scroll-behavior: smooth;
+            transition: padding-bottom 0.5s ease;
+        }
+
+        .serif-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            background-color: var(--dark);
+            color: var(--gold);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.4s ease;
+            border: 1px solid var(--gold);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: var(--gold);
+            color: white;
+        }
+
+        .image-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        /* Alt Reklam Bandı Dinamik Stilleri */
+        #ad-banner {
+            position: fixed;
+            bottom: -150px; /* Varsayılan kapalı konum */
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            transition: bottom 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        #ad-banner.active {
+            bottom: 0;
+        }
+
+        .banner-glass {
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes pulse-white-text {
+            0% { opacity: 0.6; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-white-pulse {
+            animation: pulse-white-text 1.5s infinite alternate;
+        }
+
+        /* Reklam üzerindeki parıltı efekti */
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: shimmerEffect 4s infinite;
+        }
+        @keyframes shimmerEffect {
+            0% { left: -150%; }
+            100% { left: 150%; }
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-900">
+
+    <!-- WhatsApp Erişimi -->
+    <a href="https://wa.me/905550000000" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- PERİYODİK REKLAM BANDI: BAYINDIR MEDYA -->
+    <div id="ad-banner" class="banner-glass shimmer">
+        <div class="max-w-xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <div class="w-11 h-11 bg-white/5 rounded-xl flex items-center justify-center text-white border border-white/10">
+                    <i class="fas fa-magic text-sm"></i>
+                </div>
+                <div class="flex-1">
+                    <p class="text-white text-[10px] font-bold uppercase tracking-[0.25em] mb-1 animate-white-pulse">Bayındır Medya</p>
+                    <p class="text-white/70 text-xs font-light leading-snug">Özel Web Tasarımı ve Dijital Çözümler</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://bayindirmedya.com.tr" target="_blank" class="bg-white text-black px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-wider hover:bg-gold hover:text-white transition-all">
+                    Bilgi Al
+                </a>
+                <button onclick="closeBannerManually()" class="text-white/30 hover:text-white transition p-2">
+                    <i class="fas fa-times text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="relative bg-[#0a0a0a] text-white overflow-hidden image-mask pb-24">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%"><rect width="100%" height="100%" fill="url(#grid)"/><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs></svg>
+        </div>
+        
+        <div class="relative z-10 pt-16 px-6 text-center">
+            <!-- LOGO ALANI -->
+            <div class="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
+                <img src="https://via.placeholder.com/200x200/0a0a0a/c5a358?text=LOGO" alt="Marka Logosu" class="max-w-full max-h-full object-contain">
+            </div>
+
+            <span class="text-[10px] uppercase tracking-[0.5em] text-[#c5a358] font-semibold mb-3 block">Premium Sağlık Hizmetleri</span>
+            <h1 class="serif-font text-5xl font-light mb-2 tracking-tight italic">Fzt. [İsim Soyisim]</h1>
+            <p class="text-white/50 font-light text-sm italic serif-font text-xl">Evde Fizyoterapi ve Rehabilitasyon</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-xl mx-auto px-6 -mt-12 relative z-20 pb-16">
+        
+        <!-- Hızlı İşlemler -->
+        <div class="grid grid-cols-2 gap-4 mb-12">
+            <a href="tel:+905550000000" class="flex items-center justify-center gap-3 py-5 bg-white rounded-2xl premium-shadow border border-stone-100 transition-all hover:bg-slate-50">
+                <i class="fas fa-phone-alt text-[#c5a358]"></i>
+                <span class="text-[10px] font-bold uppercase tracking-widest">Hemen Ara</span>
+            </a>
+            <a href="https://wa.me/905550000000" class="flex items-center justify-center gap-3 py-5 bg-white rounded-2xl premium-shadow border border-stone-100 transition-all hover:bg-slate-50">
+                <i class="fab fa-whatsapp text-[#c5a358]"></i>
+                <span class="text-[10px] font-bold uppercase tracking-widest">Mesaj Gönder</span>
+            </a>
+        </div>
+
+        <!-- Biyografi -->
+        <section class="mb-16 text-center px-4">
+            <h2 class="serif-font text-3xl italic mb-6">Konforunuzda İyileşin</h2>
+            <p class="text-stone-500 leading-relaxed font-light text-lg">
+                Fizyoterapiyi evinizin güvenli ve huzurlu ortamına taşıyorum. Uzmanlığım ve tecrübemle, hareket özgürlüğünüzü geri kazanmanız için yanınızdayım.
+            </p>
+        </section>
+
+        <!-- Tedaviler -->
+        <section class="mb-16">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-[1px] flex-1 bg-stone-200"></div>
+                <h2 class="serif-font text-2xl italic tracking-wide text-stone-400">Tedaviler</h2>
+                <div class="h-[1px] flex-1 bg-stone-200"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-3xl border border-stone-50 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#c5a358]">
+                            <i class="fas fa-hand-holding-medical"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm tracking-tight">Özel Manuel Terapi</h3>
+                            <p class="text-[10px] text-stone-400 uppercase tracking-widest">Ağrı ve Hareket</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-stone-50 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#c5a358]">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm tracking-tight">Nörolojik Rehabilitasyon</h3>
+                            <p class="text-[10px] text-stone-400 uppercase tracking-widest">İnme ve MS Takibi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eğitim -->
+        <section class="mb-16">
+            <h2 class="serif-font text-2xl italic mb-8 text-center text-stone-400">Akademik Altyapı</h2>
+            <div class="space-y-6 px-6">
+                <div class="relative pl-6 border-l-2 border-gold/20">
+                    <div class="absolute w-2 h-2 rounded-full bg-gold -left-[5px] top-1.5"></div>
+                    <p class="text-sm font-semibold">İstanbul Üniversitesi</p>
+                    <p class="text-xs text-stone-400">Fizyoterapi ve Rehabilitasyon Lisans</p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-gold/20">
+                    <div class="absolute w-2 h-2 rounded-full bg-gold -left-[5px] top-1.5"></div>
+                    <p class="text-sm font-semibold">Manuel Terapi Uzmanlığı</p>
+                    <p class="text-xs text-stone-400">Uluslararası Sertifikasyon Programı</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram -->
+        <div class="mb-12">
+            <a href="https://instagram.com/fztkullanici" target="_blank" class="w-full py-5 rounded-3xl bg-[#0a0a0a] text-white flex items-center justify-center gap-4 transition-all hover:bg-stone-800 shadow-xl">
+                <i class="fab fa-instagram text-[#c5a358] text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-[0.2em]">Klinik Güncesi</span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-stone-100 py-16 px-6 text-center">
+        <div class="max-w-xl mx-auto space-y-8">
+            <h5 class="serif-font text-2xl italic tracking-tight">Fzt. [İsim Soyisim]</h5>
+            <div class="flex flex-wrap justify-center gap-3 opacity-30 text-[8px] uppercase tracking-widest font-bold">
+                <span>Nişantaşı</span><span>•</span><span>Etiler</span><span>•</span><span>Bebek</span><span>•</span><span>Ulus</span>
+            </div>
+            
+            <div class="pt-10 border-t border-stone-50">
+                <div class="group inline-block">
+                    <a href="https://bayindirmedya.com.tr" target="_blank" class="flex flex-col items-center gap-2">
+                        <span class="text-[9px] font-bold tracking-[0.2em] text-stone-300 uppercase font-inter">Premium Digital Studio</span>
+                        <span class="text-gold font-bold text-sm tracking-[0.6em] transition-all group-hover:tracking-[0.7em]">BAYINDIR MEDYA</span>
+                    </a>
+                </div>
+                <p class="text-[8px] text-stone-200 mt-6 uppercase tracking-widest">© 2025 Tüm Hakları Saklıdır</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const adBanner = document.getElementById('ad-banner');
+        let bannerTimer;
+        let isClosedManually = false;
+
+        function showBanner() {
+            if (!isClosedManually) {
+                adBanner.classList.add('active');
+                document.body.style.paddingBottom = "90px";
+                
+                // 10 saniye sonra otomatik gizle (arada bir çıkması için)
+                setTimeout(hideBanner, 10000);
+            }
+        }
+
+        function hideBanner() {
+            adBanner.classList.remove('active');
+            document.body.style.paddingBottom = "0";
+        }
+
+        function closeBannerManually() {
+            hideBanner();
+            isClosedManually = true;
+            // Manuel kapatılırsa 60 saniye boyunca tekrar çıkarma
+            setTimeout(() => { isClosedManually = false; }, 60000);
+        }
+
+        // İlk açılışta 4 saniye sonra göster
+        window.onload = function() {
+            setTimeout(showBanner, 4000);
+            
+            // Her 45 saniyede bir reklamın tekrar çıkması için döngü
+            setInterval(() => {
+                if (!adBanner.classList.contains('active')) {
+                    showBanner();
+                }
+            }, 45000);
+        }
+    </script>
+</body>
+</html>
