@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAYINDIR MEDYA - Fizyoterapist Web Sitesi Demoları</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .demo-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <div class="bg-sky-500 p-2 rounded-lg">
+                    <i class="fas fa-hand-holding-medical text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-800 tracking-tight uppercase">Bayındır Medya</h1>
+                    <p class="text-xs text-sky-600 font-semibold tracking-widest uppercase">Dijital Çözümler</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#" class="hover:text-sky-600 transition">Anasayfa</a>
+                <a href="#" class="hover:text-sky-600 transition">Hizmetlerimiz</a>
+                <a href="#" class="hover:text-sky-600 transition">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white border-b">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+                FİZYOTERAPİST WEB SİTESİ <span class="gradient-text">DEMOLARI</span>
+            </h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Modern fizyoterapi kliniklerine özel olarak tasarlanmış, mobil uyumlu ve SEO dostu web sitesi şablonlarımızı inceleyin.
+            </p>
+        </div>
+    </section>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <a href="demo1.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-sky-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-sky-500 transition-colors">
+                    <i class="fas fa-desktop text-sky-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #1</h3>
+                <p class="text-sm text-slate-500 mb-4">Minimalist ve ferah tasarım odaklı klinik arayüzü.</p>
+                <span class="mt-auto inline-flex items-center text-sky-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+            <a href="demo2.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-teal-500 transition-colors">
+                    <i class="fas fa-heartbeat text-teal-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #2</h3>
+                <p class="text-sm text-slate-500 mb-4">Hasta randevu odaklı ve dinamik bileşenler.</p>
+                <span class="mt-auto inline-flex items-center text-teal-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+            <a href="demo3.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-user-md text-blue-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #3</h3>
+                <p class="text-sm text-slate-500 mb-4">Uzman doktor profili ve kurumsal tanıtım.</p>
+                <span class="mt-auto inline-flex items-center text-blue-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+            <a href="demo4.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-indigo-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-indigo-500 transition-colors">
+                    <i class="fas fa-clinic-medical text-indigo-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #4</h3>
+                <p class="text-sm text-slate-500 mb-4">Video içerik ve egzersiz odaklı blog yapısı.</p>
+                <span class="mt-auto inline-flex items-center text-indigo-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+            <a href="demo5.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-colors">
+                    <i class="fas fa-spa text-emerald-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #5</h3>
+                <p class="text-sm text-slate-500 mb-4">Modern sağlık ve estetik fizyoterapi konsepti.</p>
+                <span class="mt-auto inline-flex items-center text-emerald-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+            <a href="demo6.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-violet-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-violet-500 transition-colors">
+                    <i class="fas fa-mobile-alt text-violet-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #6</h3>
+                <p class="text-sm text-slate-500 mb-4">Mobil öncelikli (Mobile First) uygulama tarzı.</p>
+                <span class="mt-auto inline-flex items-center text-violet-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+            <a href="demo7.html" class="demo-card bg-white rounded-2xl border border-slate-200 p-6 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-rose-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-rose-500 transition-colors">
+                    <i class="fas fa-images text-rose-500 text-2xl group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Demo Tasarım #7</h3>
+                <p class="text-sm text-slate-500 mb-4">Galeri ağırlıklı ve görsel odaklı sunum.</p>
+                <span class="mt-auto inline-flex items-center text-rose-600 font-semibold text-sm">
+                    Önizleme <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </span>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-8 mb-8">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h4 class="text-2xl font-bold mb-2 uppercase">Bayındır Medya</h4>
+                    <p class="text-slate-400 max-w-sm">Sağlık sektöründeki dijital varlığınızı güçlendirmek için profesyonel web çözümleri sunuyoruz.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 text-sm">
+                &copy; 2024 Bayındır Medya - Tüm Hakları Saklıdır.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
