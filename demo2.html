@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzt. [İsim Soyisim] | Doğal Hareket ve Bütüncül Terapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Quicksand:wght@400;600&display=swap');
+        
+        :root {
+            --soft-green: #e9edc9;
+            --sage: #ccd5ae;
+            --earth: #faedcd;
+            --text-dark: #333d29;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #fefae0;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        .heading-font {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .blob {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            background: var(--sage);
+            animation: morph 8s linear infinite alternate;
+        }
+
+        @keyframes morph {
+            0% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+            100% { border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-curve {
+            clip-path: ellipse(150% 100% at 50% 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Nav -->
+    <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-2xl">
+        <nav class="glass-card rounded-full px-8 py-4 flex justify-between items-center shadow-sm">
+            <span class="heading-font font-bold text-lg tracking-tight">Fzt. İsim</span>
+            <div class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-wider opacity-70">
+                <a href="#welcome" class="hover:opacity-100 transition">Merhaba</a>
+                <a href="#approach" class="hover:opacity-100 transition">Yaklaşım</a>
+                <a href="#contact" class="hover:opacity-100 transition">İletişim</a>
+            </div>
+            <a href="#contact" class="bg-[#d4a373] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-tighter hover:bg-[#bc8a5f] transition">Randevu</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="welcome" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 text-center lg:text-left">
+                <div class="inline-block px-4 py-1 rounded-full bg-[#ccd5ae]/30 text-[#606c38] text-sm font-bold uppercase tracking-widest">
+                    Vücudunuzu Dinleyin
+                </div>
+                <h1 class="heading-font text-5xl lg:text-7xl font-bold leading-[1.1]">
+                    Dengeli Bir <span class="text-[#d4a373]">Yaşam</span> İçin Doğal Hareket.
+                </h1>
+                <p class="text-lg opacity-80 leading-relaxed max-w-md mx-auto lg:mx-0">
+                    Sadece iyileşmek değil, kendinizi daha iyi tanımak ve vücudunuzun bilgeliğine güvenmek için buradayım.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button class="bg-[#606c38] text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg transition-all">Hikayemi Oku</button>
+                    <button class="border-2 border-[#606c38] text-[#606c38] px-8 py-4 rounded-2xl font-bold hover:bg-[#606c38] hover:text-white transition-all">Tanışma Seansı</button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="blob w-full aspect-square absolute top-0 left-0 opacity-20 -z-10 scale-110"></div>
+                <div class="rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Yoga ve Terapi" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach / Yaklaşım -->
+    <section id="approach" class="py-24 bg-[#ccd5ae]/20 section-curve">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="heading-font text-4xl font-bold">Bütüncül Bakış Açısı</h2>
+                <p class="max-w-xl mx-auto opacity-70">Tedavi süreci sadece fiziksel egzersizlerden ibaret değildir. Zihin ve bedenin uyumunu odağa alıyoruz.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/40 p-10 rounded-[3rem] text-center space-y-4 hover:bg-white transition-colors duration-500 group">
+                    <div class="w-16 h-16 bg-[#e9edc9] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-leaf text-[#606c38] text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font font-bold text-xl">Doğal Onarım</h3>
+                    <p class="text-sm opacity-70">Vücudunuzun kendi iyileşme kapasitesini en doğal tekniklerle destekliyoruz.</p>
+                </div>
+
+                <div class="bg-white/40 p-10 rounded-[3rem] text-center space-y-4 hover:bg-white transition-colors duration-500 group">
+                    <div class="w-16 h-16 bg-[#faedcd] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-wind text-[#d4a373] text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font font-bold text-xl">Nefes & Farkındalık</h3>
+                    <p class="text-sm opacity-70">Her hareketin temelinde doğru nefes ve bedensel farkındalık yatar.</p>
+                </div>
+
+                <div class="bg-white/40 p-10 rounded-[3rem] text-center space-y-4 hover:bg-white transition-colors duration-500 group">
+                    <div class="w-16 h-16 bg-[#e2e8f0] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                        <i class="fas fa-spa text-slate-500 text-2xl"></i>
+                    </div>
+                    <h3 class="heading-font font-bold text-xl">Sürdürülebilirlik</h3>
+                    <p class="text-sm opacity-70">Klinikten çıktıktan sonra da devam edebileceğiniz sağlıklı bir yaşam disiplini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Deneyim -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1593072725727-440266436324?auto=format&fit=crop&w=400&q=80" class="rounded-[2rem] shadow-lg mt-10" alt="Detay 1">
+                    <img src="https://images.unsplash.com/photo-1579126038827-77aa47526019?auto=format&fit=crop&w=400&q=80" class="rounded-[2rem] shadow-lg" alt="Detay 2">
+                </div>
+                <div class="md:w-1/2 space-y-6">
+                    <h2 class="heading-font text-4xl font-bold italic text-[#606c38]">Bir Uzman, Bir Rehber...</h2>
+                    <p class="leading-relaxed opacity-80">
+                        Yıllar süren klinik çalışmalarım bana şunu öğretti: Herkesin iyileşme hızı ve yolu farklıdır. Bu yüzden seanslarımızda standart protokoller yerine tamamen size özel bir yol haritası çiziyoruz.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 font-semibold"><i class="fas fa-check-circle text-[#d4a373]"></i> Klinik Pilates Uzmanlığı</li>
+                        <li class="flex items-center gap-3 font-semibold"><i class="fas fa-check-circle text-[#d4a373]"></i> Biyomekanik Analiz</li>
+                        <li class="flex items-center gap-3 font-semibold"><i class="fas fa-check-circle text-[#d4a373]"></i> Myofasyal Gevşetme</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-[#606c38] text-white rounded-[4rem] mx-4 mb-10 overflow-hidden relative">
+        <div class="blob w-96 h-96 absolute -bottom-20 -right-20 bg-white/5 opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center space-y-8">
+            <h2 class="heading-font text-4xl font-bold">Yeni Bir Başlangıç Yapalım</h2>
+            <p class="opacity-80">Ağrısız ve özgür hareket etmek bir lüks değil, haktır. İlk adım için bana yazın.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mt-10">
+                <a href="mailto:merhaba@isim.com" class="bg-white text-[#606c38] px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-transform">E-posta Gönder</a>
+                <a href="tel:+9000000000" class="bg-[#d4a373] text-white px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-transform">Hemen Ara</a>
+            </div>
+
+            <div class="pt-12 border-t border-white/10 flex justify-center gap-12 opacity-60">
+                <a href="#" class="hover:opacity-100 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:opacity-100 transition"><i class="fab fa-whatsapp text-2xl"></i></a>
+                <a href="#" class="hover:opacity-100 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
+            <p class="heading-font font-bold text-xl opacity-80">Fzt. İsim Soyisim</p>
+            <p class="text-xs text-stone-400 tracking-widest uppercase">© 2025 Şifa ve Hareket Atölyesi. Tüm Hakları Saklıdır.</p>
+            <div class="mt-2 group">
+                <a href="https://bayindirmedya.com.tr" target="_blank" class="text-[10px] text-stone-400 font-medium tracking-[0.2em] transition-all hover:text-[#606c38]">
+                    DİJİTAL DÖNÜŞÜM: <span class="font-bold border-b border-transparent group-hover:border-[#606c38]">BAYINDIR MEDYA</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
