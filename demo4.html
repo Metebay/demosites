@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzt. [İsim Soyisim] | Exclusive Physical Therapy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap');
+        
+        :root {
+            --gold: #c5a358;
+            --dark: #0f1111;
+            --light: #f4f1ea;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            scroll-behavior: smooth;
+        }
+
+        .serif-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .gold-text { color: var(--gold); }
+        .gold-bg { background-color: var(--gold); }
+        .gold-border { border-color: var(--gold); }
+
+        .line-detail {
+            position: relative;
+        }
+        .line-detail::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background-color: var(--gold);
+        }
+
+        .image-reveal {
+            overflow: hidden;
+            position: relative;
+        }
+        .image-reveal img {
+            transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .image-reveal:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasyon -->
+    <nav class="fixed w-full z-50 mix-blend-difference py-8 px-10">
+        <div class="max-w-[1800px] mx-auto flex justify-between items-center">
+            <a href="#" class="serif-font text-3xl font-light text-white tracking-widest uppercase">Fzt. İsim</a>
+            <div class="hidden md:flex gap-12 text-[10px] font-light uppercase tracking-[0.3em] text-white/70">
+                <a href="#biography" class="nav-link hover:text-white transition">Biyografi</a>
+                <a href="#philosophy" class="nav-link hover:text-white transition">Felsefe</a>
+                <a href="#services" class="nav-link hover:text-white transition">Uzmanlık</a>
+                <a href="#contact" class="nav-link hover:text-white transition">İletişim</a>
+            </div>
+            <button class="md:hidden text-white"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-[#0f1111]">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80" alt="Klinik Ortamı" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center space-y-6 px-4">
+            <span class="text-white/50 uppercase tracking-[0.5em] text-[10px] font-light block mb-4">The Art of Recovery</span>
+            <h1 class="serif-font text-6xl md:text-8xl lg:text-9xl text-white font-light leading-none">
+                Zarafet ve <br> <span class="italic gold-text">İyileşme.</span>
+            </h1>
+            <div class="w-px h-24 gold-bg mx-auto mt-12 opacity-50"></div>
+        </div>
+    </section>
+
+    <!-- Biyografi / Biography -->
+    <section id="biography" class="py-32 px-10 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="image-reveal aspect-[3/4] bg-stone-100">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80" alt="Fizyoterapist" class="w-full h-full object-cover grayscale hover:grayscale-0">
+                </div>
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <h2 class="serif-font text-5xl font-light leading-tight">Mükemmel Hareket <br>Kişisel Bir Mirastır.</h2>
+                        <div class="w-12 h-[1px] gold-bg"></div>
+                    </div>
+                    <p class="text-stone-500 leading-loose font-light text-lg">
+                        On yılı aşkın süredir, bedenin sınırlarını zorlayan profesyonellerden, günlük yaşam konforunu arayan bireylere kadar geniş bir yelpazede danışmanlık veriyorum. Akademik temelli yaklaşımımı, estetik ve fonksiyonel bir bakış açısıyla harmanlayarak "exclusive" bir tedavi deneyimi sunuyorum.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 pt-6">
+                        <div>
+                            <p class="serif-font text-3xl gold-text">12+</p>
+                            <p class="text-[9px] uppercase tracking-widest text-stone-400 mt-2">Yıllık Tecrübe</p>
+                        </div>
+                        <div>
+                            <p class="serif-font text-3xl gold-text">Nişantaşı</p>
+                            <p class="text-[9px] uppercase tracking-widest text-stone-400 mt-2">Merkez Klinik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Felsefe / Philosophy -->
+    <section id="philosophy" class="py-32 bg-[#1a1c1c] text-white">
+        <div class="max-w-4xl mx-auto px-10 text-center space-y-12">
+            <span class="gold-text uppercase tracking-[0.4em] text-[10px]">Vizyonumuz</span>
+            <h3 class="serif-font text-4xl md:text-6xl font-light italic leading-snug">
+                "Tedavi sadece bir sonuç değil, bedeninize geri kazandırdığınız saygılı bir yolculuktur."
+            </h3>
+            <p class="text-white/40 font-light max-w-xl mx-auto leading-relaxed">
+                Her seans, biyomekanik prensiplerin en ince ayrıntısına kadar planlandığı bir restorasyon sürecidir. Gelişmiş manuel teknikleri, kanıta dayalı bilimle buluşturuyoruz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Uzmanlık Alanları / Specialties -->
+    <section id="services" class="py-32 px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-6">
+                <h2 class="serif-font text-5xl font-light">Özel Hizmetler</h2>
+                <a href="#contact" class="text-[10px] uppercase tracking-widest gold-text border-b gold-border pb-1">Tümünü Keşfet</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-stone-200 border border-stone-200">
+                <div class="bg-white p-12 space-y-6 hover:bg-stone-50 transition">
+                    <span class="text-stone-300 serif-font text-4xl italic">01</span>
+                    <h4 class="font-medium tracking-widest uppercase text-xs">Postural Analiz</h4>
+                    <p class="text-stone-400 text-sm font-light leading-relaxed">Vücut simetrinizin ve duruş bozukluklarınızın ileri düzey teknolojilerle incelenmesi.</p>
+                </div>
+                <div class="bg-white p-12 space-y-6 hover:bg-stone-50 transition">
+                    <span class="text-stone-300 serif-font text-4xl italic">02</span>
+                    <h4 class="font-medium tracking-widest uppercase text-xs">Elit Manuel Terapi</h4>
+                    <p class="text-stone-400 text-sm font-light leading-relaxed">Yumuşak doku ve eklem mobilizasyonunda dünya standartlarında el teknikleri.</p>
+                </div>
+                <div class="bg-white p-12 space-y-6 hover:bg-stone-50 transition">
+                    <span class="text-stone-300 serif-font text-4xl italic">03</span>
+                    <h4 class="font-medium tracking-widest uppercase text-xs">Kinematik Kontrol</h4>
+                    <p class="text-stone-400 text-sm font-light leading-relaxed">Hareket kalitenizi artırmak için tasarlanmış özel kontrol egzersizleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim / Contact -->
+    <section id="contact" class="py-32 bg-white px-10 border-t border-stone-100">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div class="space-y-8">
+                <h2 class="serif-font text-6xl font-light">Bize Katılın.</h2>
+                <p class="text-stone-400 font-light">Randevu talepleriniz ve özel sorularınız için ekibimizle iletişime geçin.</p>
+                <div class="space-y-4 pt-10">
+                    <div class="line-detail pb-2">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400">Telefon</p>
+                        <p class="serif-font text-2xl">+90 (212) 345 67 89</p>
+                    </div>
+                    <div class="line-detail pb-2">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400">Adres</p>
+                        <p class="serif-font text-2xl">Abdi İpekçi Cd. No:12, Nişantaşı</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-stone-50 p-12">
+                <form class="space-y-6">
+                    <div class="border-b border-stone-200 pb-2">
+                        <input type="text" placeholder="Adınız" class="w-full bg-transparent outline-none text-sm font-light py-2">
+                    </div>
+                    <div class="border-b border-stone-200 pb-2">
+                        <input type="email" placeholder="E-posta" class="w-full bg-transparent outline-none text-sm font-light py-2">
+                    </div>
+                    <div class="border-b border-stone-200 pb-2">
+                        <textarea placeholder="Mesajınız" rows="4" class="w-full bg-transparent outline-none text-sm font-light py-2"></textarea>
+                    </div>
+                    <button class="gold-bg text-white px-12 py-4 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-black transition-colors w-full md:w-auto">
+                        Gönder
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-[#0f1111] text-white px-10 text-center md:text-left">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="space-y-2">
+                <p class="serif-font text-3xl font-light tracking-widest">Fzt. İsim Soyisim</p>
+                <p class="text-[8px] uppercase tracking-[0.4em] text-white/30">Exclusive Physical Rehabilitation</p>
+            </div>
+            
+            <div class="flex flex-col items-center gap-4">
+                <p class="text-[9px] text-white/20 uppercase tracking-[0.2em]">© 2025 Boutique Clinic Experience</p>
+                <div class="group">
+                    <a href="https://bayindirmedya.com.tr" target="_blank" class="text-[8px] text-white/40 font-medium tracking-[0.3em] hover:text-white transition-all">
+                        DİJİTAL ESTETİK: <span class="gold-text font-bold">BAYINDIR MEDYA</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex gap-8 text-white/40">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
